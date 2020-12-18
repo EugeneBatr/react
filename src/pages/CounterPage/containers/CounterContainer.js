@@ -17,10 +17,13 @@ class CounterContainer extends React.Component {
         handleRemove =() => {
                 this.setState({countValue: this.state.countValue - 1})
         }
+        handleReset =() => {
+                this.setState({countValue: this.state.countValue = 0})
+        }
 
         render() {
                 return(
-                        <Counter counterValue={this.state.countValue} handleAdd={this.handleAdd} handleRemove={this.handleRemove}/>
+                        <Counter counterValue={this.state.countValue} handleAdd={this.handleAdd} handleRemove={this.handleRemove} handleReset={this.handleReset}/>
                 );
         }
 }
